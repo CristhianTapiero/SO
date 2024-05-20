@@ -1,0 +1,20 @@
+while(true)
+do
+clear
+echo "Seleccione la opción:"
+echo "a Ver programa 1"
+echo "b Ver programa 2"
+echo "c Ver programa en C"
+echo "x Para volver al menu anterior"
+echo -n "Opción: "
+read op
+case $op in
+a)xdg-open 'https://www.memorysim.vercel.app';;
+b)xdg-open 'https://www.procesos-tapiero.vercel-app';;
+c)./programa;;
+x)break;;
+*) echo "Opción invalida: ${op} no es una opción";;
+esac
+echo -n "Presione enter para continuar"
+read ENTER
+done

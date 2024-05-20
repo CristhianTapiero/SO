@@ -1,0 +1,36 @@
+while (true)
+do
+clear
+echo "Seleccionar la opción"
+echo "a Calendario"
+echo "b Listar"
+echo "c Digite la palabra"
+echo "u Mostrar usuario"
+echo "x Terminar"
+echo "d Menu avanzado"
+echo "z Menu de programas"
+echo -n "Opción: "
+read ALGO
+
+case $ALGO in
+
+
+a) date;;
+b) ls -l;;
+c) echo "Digite la palabra"
+read SOM
+echo -n "Digitaste "
+echo "${SOM}" | tr '[:upper:]' '[:lower:]';;
+u) echo "Tu usuario es: ${USER}";;
+x) break;;
+d) sh menu2;;
+z) sh menu3;;
+*) echo "Opción invalida: ${ALGO} no es una opción";;
+
+esac
+
+echo -n "Presione enter para continuar"
+read ENTER
+done
+
+

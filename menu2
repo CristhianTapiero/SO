@@ -1,0 +1,26 @@
+while (true)
+do
+clear
+echo "Menu avanzado"
+echo "Seleccionar opción:"
+echo "a Abrir codigo fuente del menu principal"
+echo "c Apagar el computador"
+echo "d Ver procesos de Linux"
+echo "e Ver datos generales de la maquina"
+echo "b Volver al menu basico"
+echo "x Cerrar"
+echo -n "Opción: "
+read op
+case $op in
+a) nano menu;;
+c) shutdown -h 0;;
+d) ps -ef;;
+e) sudo apt-get install neofetch
+neofetch;;
+b) sh menu;;
+x) break;;
+*) echo "Opción invalida: ${op} no es una opción"
+esac
+echo -n "Presione enter para continuar"
+read ENTER
+done
